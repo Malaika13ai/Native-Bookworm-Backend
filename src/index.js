@@ -17,6 +17,13 @@ app.use(cors());
 app.use("/api/auth",authRoutes)
 app.use("/api/books",bookRoutes)
 
+// app.get("/", (req, res) => {
+//   res.send("Bookworm API is running");
+// });
+
+
+
+
 app.listen(PORT ,()=>{
     console.log(`server is running on port ${PORT}`);
     connectDB();
