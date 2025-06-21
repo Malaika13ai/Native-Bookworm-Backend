@@ -48,6 +48,7 @@ router.post("/register", async (req, res) => {
       username,
       password,
       profileImage,
+   
     });
 
     await user.save();
@@ -61,6 +62,7 @@ router.post("/register", async (req, res) => {
         username: user.username,
         email: user.email,
         profileImage: user.profileImage,
+           createdAt: user.createdAt
       },
     });
   } catch (error) {
@@ -98,7 +100,8 @@ res.status(201).json({
         _id:user._id,
         username: user.username,
         email: user.email,
-        profileImage:user.profileImage
+        profileImage:user.profileImage,
+         createdAt: user.createdAt
     }
 })
 
